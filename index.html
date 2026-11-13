@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blockchain Sederhana</title>
+
+    <style>
+
+        body {
+            font-family: Arial;
+            background-color: white;
+            padding: 30px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            gap: 50px;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .form-box {
+            width: 400px;
+            border: 2px solid black;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        .output-box {
+            width: 450px;
+            min-height: 400px;
+            border: 2px solid black;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        label {
+            display: block;
+            margin-top: 20px;
+        }
+
+        select, input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 8px;
+            box-sizing: border-box;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 30px;
+            cursor: pointer;
+        }
+
+        .block {
+            border: 1px solid black;
+            padding: 15px;
+            margin-top: 15px;
+            overflow-wrap: anywhere;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h2>BLOCKCHAIN SEDERHANA</h2>
+
+    <div class="container">
+
+        <!-- FORM INPUT -->
+
+        <div class="form-box">
+
+            <h2>Input Data</h2>
+
+            <form action="/" method="POST">
+
+                <label>Nama 1:</label>
+
+                <select name="nama1" required>
+                    <option value="">Pilih Nama</option>
+                    <option value="Ali">Ali</option>
+                    <option value="Tono">Tono</option>
+                </select>
+
+
+                <label>Nama 2:</label>
+
+                <select name="nama2" required>
+                    <option value="">Pilih Nama</option>
+                    <option value="Ali">Ali</option>
+                    <option value="Tono">Tono</option>
+                </select>
+
+
+                <label>Uang:</label>
+
+                <input
+                    type="number"
+                    name="uang"
+                    placeholder="Masukkan uang"
+                    min="1"
+                    required
+                >
+
+                <button type="submit">Submit</button>
+
+            </form>
+
+        </div>
+
+
+        <!-- HASIL OUTPUT -->
+
+        <div class="output-box">
+
+            <h2>Hasil Block</h2>
+
+            {{BLOCKS}}
+
+        </div>
+
+    </div>
+
+</body>
+</html>
